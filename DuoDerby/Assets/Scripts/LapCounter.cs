@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.Vehicles.Car;
 
 public class LapCounter : MonoBehaviour {
-	public Collider finish_line;
 	public List<Transform> pointList = new List<Transform>();
 	public int numlaps;
 	public Transform car;
 	public Animator anim;
+	public int range;
 
 	private int numpoints;
 	public Transform nextPoint;
@@ -23,7 +24,7 @@ public class LapCounter : MonoBehaviour {
 	void Update () {
 		// check distance to next point
 		float dist = Vector3.Distance(car.position, nextPoint.position);
-		if (dist < 5 && index < numpoints) {
+		if (dist < range && index < numpoints) {
 			Debug.Log("changing points");
 			nextPoint = pointList[index];
 			index++;
@@ -44,6 +45,8 @@ public class LapCounter : MonoBehaviour {
 		Debug.Log("entered function");
 		anim.SetBool("Showing", true);
 		numlaps = -1;
+		car.GetComponent<CarUserControl>().enabled = false;
+		car.GetComponent<CarAIControl>().enabled = true;
 		yield return new WaitForSeconds(10);
 		Application.LoadLevel("MainMenu");
 	}
