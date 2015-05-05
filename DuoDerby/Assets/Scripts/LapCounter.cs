@@ -7,6 +7,7 @@ public class LapCounter : MonoBehaviour {
 	public List<Transform> pointList = new List<Transform>();
 	public int numlaps;
 	public Transform car;
+	public Animator anim;
 
 	private int numpoints;
 	public Transform nextPoint;
@@ -24,14 +25,26 @@ public class LapCounter : MonoBehaviour {
 		float dist = Vector3.Distance(car.position, nextPoint.position);
 		if (dist < 5 && index < numpoints) {
 			Debug.Log("changing points");
-			nextPoint = pointList[index++];
+			nextPoint = pointList[index];
+			index++;
 		} else if (index == numpoints) {
-			Debug.Log(index);
 			numlaps--;
 			index = 0;
 			nextPoint = pointList[0];
-		} else if (numlaps <= 0) {
-			Debug.Log("race finished");
 		}
+		if (numlaps == 0) {
+			//Debug.Log("race finished");
+			StartCoroutine(endRace());
+			endRace();
+
+		}
+	}
+
+	IEnumerator endRace() {
+		Debug.Log("entered function");
+		anim.SetBool("Showing", true);
+		numlaps = -1;
+		yield return new WaitForSeconds(10);
+		Application.LoadLevel("MainMenu");
 	}
 }
