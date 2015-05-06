@@ -52,7 +52,6 @@ public class Countdown : MonoBehaviour {
 				this.GetComponent<AudioSource>().Play();
                 text.text = i.ToString();
                 yield return new WaitForSeconds(1);
-                Debug.Log("This is my else case");
             }
         }
     }
