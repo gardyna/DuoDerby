@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour {
 	public Animator dialog;
 
 	public void StartGame() {
-		Application.LoadLevel("BuildingRoad");
+		Application.LoadLevel("WiderRoad");
 	}
 
 	public void OpenSettings() {

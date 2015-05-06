@@ -624,6 +624,7 @@ GameObject:
   - 114: {fileID: 11432104}
   - 114: {fileID: 11416258}
   - 114: {fileID: 11471860}
+  - 114: {fileID: 11402742}
   m_Layer: 0
   m_Name: KartWaypointBased
   m_TagString: Player
@@ -1269,7 +1270,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -225.522217, y: -8.64318371, z: -52.6090088}
+  m_LocalPosition: {x: 52.3049812, y: .0399483442, z: 267.729584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 487862}
@@ -3052,6 +3053,19 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11402742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db865986f75ee44eba89ace4646af65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_WaitTime: 3
+  m_VelocityThreshold: 1
 --- !u!114 &11416258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3102,7 +3116,7 @@ MonoBehaviour:
   m_MaximumSteerAngle: 25
   m_SteerHelper: .754999995
   m_TractionControl: .100000001
-  m_FullTorqueOverAllWheels: 2000
+  m_FullTorqueOverAllWheels: 4500
   m_ReverseTorque: 150
   m_MaxHandbrakeTorque: 1e+08
   m_Downforce: 100

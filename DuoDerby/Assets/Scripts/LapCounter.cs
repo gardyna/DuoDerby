@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityStandardAssets.Vehicles.Car;
+using UnityStandardAssets.Utility;
 
 public class LapCounter : MonoBehaviour {
 	public List<Transform> pointList = new List<Transform>();
@@ -18,6 +19,9 @@ public class LapCounter : MonoBehaviour {
 	void Start () {
 		numpoints = pointList.Count;
 		nextPoint = pointList[0];
+		car.GetComponent<CarUserControl>().enabled = true;
+		car.GetComponent<WaypointProgressTracker>().enabled = false;
+		car.GetComponent<CarAIControl>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -25,7 +29,6 @@ public class LapCounter : MonoBehaviour {
 		// check distance to next point
 		float dist = Vector3.Distance(car.position, nextPoint.position);
 		if (dist < range && index < numpoints) {
-			Debug.Log("changing points");
 			nextPoint = pointList[index];
 			index++;
 		} else if (index == numpoints) {
@@ -34,7 +37,6 @@ public class LapCounter : MonoBehaviour {
 			nextPoint = pointList[0];
 		}
 		if (numlaps == 0) {
-			//Debug.Log("race finished");
 			StartCoroutine(endRace());
 			endRace();
 
@@ -42,10 +44,10 @@ public class LapCounter : MonoBehaviour {
 	}
 
 	IEnumerator endRace() {
-		Debug.Log("entered function");
 		anim.SetBool("Showing", true);
 		numlaps = -1;
 		car.GetComponent<CarUserControl>().enabled = false;
+		car.GetComponent<WaypointProgressTracker>().enabled = true;
 		car.GetComponent<CarAIControl>().enabled = true;
 		yield return new WaitForSeconds(10);
 		Application.LoadLevel("MainMenu");

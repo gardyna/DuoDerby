@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScene.unity
   - enabled: 1
     path: Assets/Scenes/BuildingRoad.unity
+  - enabled: 1
+    path: Assets/Scenes/WiderRoad.unity
