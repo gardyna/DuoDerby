@@ -12,7 +12,7 @@ public class LapCounter : MonoBehaviour {
 	public int range;
 
 	private int numpoints;
-	public Transform nextPoint;
+	private Transform nextPoint;
 	private int index;
 
 	// Use this for initialization
