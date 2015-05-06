@@ -17,9 +17,11 @@ public class PauseGame : MonoBehaviour {
 
 			if (Time.timeScale == 1){
 				Time.timeScale =0;
+				this.GetComponent<AudioListener>().enabled = false;
 			}
 			else{
 				Time.timeScale =1;
+				this.GetComponent<AudioListener>().enabled = true;
 			}
 
 		}
@@ -33,6 +35,7 @@ public class PauseGame : MonoBehaviour {
 			GUILayout.BeginArea (new Rect(Screen.width / 2 - menuWidth / 2, Screen.height / 2 - menuHeight / 2, menuWidth, menuHeight));
 			if (GUILayout.Button ("Resume", GUILayout.Height (buttonHeight))) {
 				Time.timeScale = 1;
+				this.GetComponent<AudioListener>().enabled = true;
 			}
 		
 			GUILayout.Space (buttonSpace);
