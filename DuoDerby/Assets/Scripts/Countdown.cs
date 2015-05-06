@@ -10,6 +10,7 @@ public class Countdown : MonoBehaviour {
 	public GameObject PlayerCar;
 	public List<GameObject> karts;
 	public Animator anim;
+	public AudioClip startSound;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +32,7 @@ public class Countdown : MonoBehaviour {
 			karts[i].GetComponent<CarAIControl>().enabled = false;
 		}
 
-        for (int i = 10; i > -1; i--)
+        for (int i = 5; i > -1; i--)
         {
             if (i == 0)
             {
@@ -40,12 +41,15 @@ public class Countdown : MonoBehaviour {
 				for (int j = 0; j < karts.Count; j++) {
 					karts[j].GetComponent<CarAIControl>().enabled = true;
 				}
+				this.GetComponent<AudioSource>().clip = startSound;
+				this.GetComponent<AudioSource>().Play();
 				anim.SetBool("go", true);
                 yield return new WaitForSeconds(3);
                 text.text = "";
             }
             else
             {
+				this.GetComponent<AudioSource>().Play();
                 text.text = i.ToString();
                 yield return new WaitForSeconds(1);
                 Debug.Log("This is my else case");
