@@ -2245,6 +2245,7 @@ Transform:
   - {fileID: 1917978950}
   - {fileID: 1398912320}
   - {fileID: 1281809250}
+<<<<<<< Updated upstream:DuoDerby/Assets/Scenes/BuildingRoad.unity
   m_Father: {fileID: 1113626491}
   m_RootOrder: 0
 --- !u!1 &985962688 stripped
@@ -2267,6 +2268,10 @@ MeshCollider:
 Transform:
   m_PrefabParentObject: {fileID: 462846, guid: 0ab1e791b8cdec3498e9b41a8778047d, type: 2}
   m_PrefabInternal: {fileID: 1724324494}
+=======
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+>>>>>>> Stashed changes:DuoDerby/Assets/Scenes/BuildingRoad.unity
 --- !u!1 &1016495449 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 2f1a6a1aa4c4ac74096a01849d901a17, type: 3}
@@ -2794,6 +2799,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+<<<<<<< Updated upstream:DuoDerby/Assets/Scenes/BuildingRoad.unity
 --- !u!1 &1113626490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2829,62 @@ Transform:
   - {fileID: 2057967580}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+=======
+--- !u!1001 &1132310587
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -71
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.13000011
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -64.1500015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+  m_IsPrefabParent: 0
+>>>>>>> Stashed changes:DuoDerby/Assets/Scenes/BuildingRoad.unity
 --- !u!21 &1188527106
 Material:
   serializedVersion: 5
@@ -4812,6 +4874,7 @@ Prefab:
 --- !u!1001 &2019210312
 Prefab:
   m_ObjectHideFlags: 0
+<<<<<<< Updated upstream:DuoDerby/Assets/Scenes/BuildingRoad.unity
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 1619557181}
@@ -4855,6 +4918,17 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ab1e791b8cdec3498e9b41a8778047d, type: 2}
   m_IsPrefabParent: 0
+=======
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917978946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 184.119995, y: -2.19309998, z: 496.329987}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 977474923}
+  m_RootOrder: 15
+>>>>>>> Stashed changes:DuoDerby/Assets/Scenes/BuildingRoad.unity
 --- !u!43 &2030708420
 Mesh:
   m_ObjectHideFlags: 0
@@ -4983,6 +5057,104 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+<<<<<<< Updated upstream:DuoDerby/Assets/Scenes/BuildingRoad.unity
+=======
+--- !u!1 &2031415562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2031415566}
+  - 218: {fileID: 2031415565}
+  - 154: {fileID: 2031415564}
+  - 114: {fileID: 2031415563}
+  - 114: {fileID: 2031415567}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &2031415563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031415562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af519f63585e60b468e8fe59ad1cca06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainid: 720986549
+--- !u!154 &2031415564
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031415562}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 5232f1d649dce4393bd0b0a7f5bb6f90, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &2031415565
+Terrain:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031415562}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_TerrainData: {fileID: 15600000, guid: 5232f1d649dce4393bd0b0a7f5bb6f90, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_CastShadows: 1
+  m_DrawHeightmap: 1
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialType: 0
+  m_LegacySpecular:
+    serializedVersion: 2
+    rgba: 4286545791
+  m_LegacyShininess: .078125
+  m_MaterialTemplate: {fileID: 0}
+  m_BakeLightProbesForTrees: 1
+  m_ScaleInLightmap: .0511999987
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!4 &2031415566
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031415562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -285.878387, y: -2.20306587, z: -279.665161}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &2031415567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031415562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e302878b4304099b4855cfc5e01fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes:DuoDerby/Assets/Scenes/BuildingRoad.unity
 --- !u!21 &2057268364
 Material:
   serializedVersion: 5
@@ -5083,8 +5255,13 @@ Transform:
   - {fileID: 1660402197}
   - {fileID: 1018038013}
   - {fileID: 933015528}
+<<<<<<< Updated upstream:DuoDerby/Assets/Scenes/BuildingRoad.unity
   m_Father: {fileID: 1113626491}
   m_RootOrder: 1
+=======
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+>>>>>>> Stashed changes:DuoDerby/Assets/Scenes/BuildingRoad.unity
 --- !u!1 &2063859922
 GameObject:
   m_ObjectHideFlags: 0
@@ -5144,16 +5321,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream:DuoDerby/Assets/Scenes/BuildingRoad.unity
   m_RootOrder: 5
 --- !u!4 &2082260317 stripped
 Transform:
   m_PrefabParentObject: {fileID: 462846, guid: 0ab1e791b8cdec3498e9b41a8778047d, type: 2}
   m_PrefabInternal: {fileID: 1839926526}
 --- !u!1001 &2084508274
+=======
+  m_RootOrder: 2
+--- !u!1001 &2071182864
+>>>>>>> Stashed changes:DuoDerby/Assets/Scenes/BuildingRoad.unity
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:DuoDerby/Assets/Scenes/BuildingRoad.unity
     m_TransformParent: {fileID: 1619557181}
     m_Modifications:
     - target: {fileID: 462846, guid: 0ab1e791b8cdec3498e9b41a8778047d, type: 2}
@@ -5291,6 +5474,108 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 462846, guid: 0ab1e791b8cdec3498e9b41a8778047d, type: 2}
   m_PrefabInternal: {fileID: 474670699}
+=======
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -71.0999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -68.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 2093269972}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: baec086904791744185aaa07a6cf55c2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &2093269971 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+  m_PrefabInternal: {fileID: 1132310587}
+--- !u!4 &2093269972 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 125d98592ef7e7944b924c24c3f53e63, type: 3}
+  m_PrefabInternal: {fileID: 1132310587}
+--- !u!114 &2093269973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2093269971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96468c245ae8e0d4f8f1c7a7b8b0542e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2093269974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2093269971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea65b38d485c374caa584a03f1de571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CarDriveType: 2
+  m_WheelColliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_WheelMeshes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_WheelEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_CentreOfMassOffset: {x: 0, y: 0, z: 0}
+  m_MaximumSteerAngle: 0
+  m_SteerHelper: 0
+  m_TractionControl: 0
+  m_FullTorqueOverAllWheels: 0
+  m_ReverseTorque: 0
+  m_MaxHandbrakeTorque: 0
+  m_Downforce: 100
+  m_SpeedType: 0
+  m_Topspeed: 200
+  m_RevRangeBoundary: 1
+  m_SlipLimit: 0
+  m_BrakeTorque: 0
+>>>>>>> Stashed changes:DuoDerby/Assets/Scenes/BuildingRoad.unity
 --- !u!1 &2134568349
 GameObject:
   m_ObjectHideFlags: 0
