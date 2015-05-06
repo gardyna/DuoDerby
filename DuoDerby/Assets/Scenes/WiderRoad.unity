@@ -1027,6 +1027,7 @@ GameObject:
   - 4: {fileID: 229953990}
   - 114: {fileID: 229953989}
   - 114: {fileID: 229953991}
+  - 114: {fileID: 229953992}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1094,6 +1095,24 @@ MonoBehaviour:
   PosText: {fileID: 1741327631}
   player: {fileID: 1407670409}
   changeRange: 20
+--- !u!114 &229953992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229953988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495d4b8d75d60b8418ec599601e120f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GUIText: {fileID: 1064652666}
+  PlayerCar: {fileID: 1970592995}
+  karts:
+  - {fileID: 568266778}
+  - {fileID: 51899185}
+  - {fileID: 664792838}
+  anim: {fileID: 1064652670}
 --- !u!4 &230459798 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ef6178546f77bc546af127fb4c56da0c, type: 3}
@@ -3538,6 +3557,90 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 462846, guid: 0ab1e791b8cdec3498e9b41a8778047d, type: 2}
   m_PrefabInternal: {fileID: 1721271904}
+--- !u!1 &1064652666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1064652669}
+  - 222: {fileID: 1064652668}
+  - 114: {fileID: 1064652667}
+  - 95: {fileID: 1064652670}
+  m_Layer: 0
+  m_Name: countdown_text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1064652667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1064652666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 46b2f36fe1c208a428a8a1a7a04fad05, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 10
+--- !u!222 &1064652668
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1064652666}
+--- !u!224 &1064652669
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1064652666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1415015564}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: 1}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -120}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!95 &1064652670
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1064652666}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d785085bd045a84d951cffcd78eb68e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1130637289
 Prefab:
   m_ObjectHideFlags: 0
