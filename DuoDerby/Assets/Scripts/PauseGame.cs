@@ -11,6 +11,14 @@ public class PauseGame : MonoBehaviour {
 
 	public Font MyFont;
 
+	private int wonders;
+	private GameObject god;	//God is watching//
+
+	void Start (){
+		wonders = 0;
+		god = GameObject.Find ("hope");
+		god.SetActive (false);
+	}
 
 	void Update () {
 		if (Input.GetKeyDown("p")){
@@ -18,6 +26,9 @@ public class PauseGame : MonoBehaviour {
 			if (Time.timeScale == 1){
 				Time.timeScale =0;
 				this.GetComponent<AudioListener>().enabled = false;
+				wonders++;
+				if (wonders >= 10)
+					god.SetActive(true);
 			}
 			else{
 				Time.timeScale =1;
@@ -25,6 +36,7 @@ public class PauseGame : MonoBehaviour {
 			}
 
 		}
+
 	}
 	
 
