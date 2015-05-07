@@ -4,19 +4,23 @@ using UnityStandardAssets.Vehicles.Car;
 
 public class SwitchPickup : MonoBehaviour {
 	public GameObject Player;
+	private bool working = true;
 
-	void OnTriggerEnter(Collider other) {
+	IEnumerator OnTriggerEnter(Collider other) {
 		Debug.Log(other.gameObject.tag);
 		if (other.gameObject.tag == "Player") {
-			Debug.Log("Enter!!!");
-			other.gameObject.GetComponentInParent<CarUserControl>().Switch();
-			this.GetComponent<Renderer>().enabled = false;
-			StartCoroutine(Wait());
-			this.GetComponent<Renderer>().enabled = false;
+			if (working) {
+				Debug.Log("Enter!!!");
+				working = false;
+				Renderer rend = GetComponent<Renderer>();
+				rend.enabled = false;
+				other.gameObject.GetComponentInParent<CarUserControl>().Switch();
+				yield return new WaitForSeconds(10);
+				rend.enabled = true;
+				working = true;
+				Debug.Log("Done");
+			}
+			
 		}
-	}
-
-	IEnumerator Wait() {
-		yield return new WaitForSeconds(2);
 	}
 }
