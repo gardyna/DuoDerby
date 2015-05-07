@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: d4a71bb49ef56dc46935874109a97b0f
+timeCreated: 1430989362
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: girl1:H_DDS_MidRes
+    100002: girl1:l_wig
+    100004: girl1:m_L_eye
+    100006: girl1:m_L_gland
+    100008: girl1:m_L_trans
+    100010: girl1:m_R_eye
+    100012: girl1:m_R_gland
+    100014: girl1:m_R_trans
+    100016: //RootNode
+    400000: girl1:H_DDS_MidRes
+    400002: girl1:l_wig
+    400004: girl1:m_L_eye
+    400006: girl1:m_L_gland
+    400008: girl1:m_L_trans
+    400010: girl1:m_R_eye
+    400012: girl1:m_R_gland
+    400014: girl1:m_R_trans
+    400016: //RootNode
+    2300000: girl1:H_DDS_MidRes
+    2300002: girl1:l_wig
+    2300004: girl1:m_L_eye
+    2300006: girl1:m_L_gland
+    2300008: girl1:m_L_trans
+    2300010: girl1:m_R_eye
+    2300012: girl1:m_R_gland
+    2300014: girl1:m_R_trans
+    3300000: girl1:H_DDS_MidRes
+    3300002: girl1:l_wig
+    3300004: girl1:m_L_eye
+    3300006: girl1:m_L_gland
+    3300008: girl1:m_L_trans
+    3300010: girl1:m_R_eye
+    3300012: girl1:m_R_gland
+    3300014: girl1:m_R_trans
+    4300000: girl1:m_L_gland
+    4300002: girl1:m_L_eye
+    4300004: girl1:m_L_trans
+    4300006: girl1:m_R_gland
+    4300008: girl1:m_R_eye
+    4300010: girl1:m_R_trans
+    4300012: girl1:H_DDS_MidRes
+    4300014: girl1:l_wig
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0799999982
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
