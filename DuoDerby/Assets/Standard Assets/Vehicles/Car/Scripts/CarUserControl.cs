@@ -8,6 +8,8 @@ namespace UnityStandardAssets.Vehicles.Car
     public class CarUserControl : MonoBehaviour
     {
         private CarController m_Car; // the car controller we want to use
+		public int driver;
+		public int engine;
 
 
         private void Awake()
@@ -20,8 +22,8 @@ namespace UnityStandardAssets.Vehicles.Car
         private void FixedUpdate()
         {
             // pass the input to the car!
-			float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
+			float h = CrossPlatformInputManager.GetAxis("Horizontal_p" + driver.ToString());
+            float v = CrossPlatformInputManager.GetAxis("Vertical_p" + engine.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             m_Car.Move(h, v, v, handbrake);
@@ -29,5 +31,16 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Car.Move(h, v, v, 0f);
 #endif
         }
+
+		public void Switch() {
+			Debug.Log("Switching");
+			if (driver == 1) {
+				driver = 2;
+				engine = 1;
+			} else {
+				driver = 1;
+				engine = 2;
+			}
+		}
     }
 }
