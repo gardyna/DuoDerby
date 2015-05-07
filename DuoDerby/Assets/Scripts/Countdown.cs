@@ -11,6 +11,7 @@ public class Countdown : MonoBehaviour {
 	public List<GameObject> karts;
 	public Animator anim;
 	public AudioClip startSound;
+	public GameObject mainCamera;
 
 	// Use this for initialization
 	void Start () {
@@ -44,7 +45,9 @@ public class Countdown : MonoBehaviour {
 				this.GetComponent<AudioSource>().clip = startSound;
 				this.GetComponent<AudioSource>().Play();
 				anim.SetBool("go", true);
-                yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(1);
+		mainCamera.GetComponent<AudioSource>().Play();
+                yield return new WaitForSeconds(2);
                 text.text = "";
             }
             else
