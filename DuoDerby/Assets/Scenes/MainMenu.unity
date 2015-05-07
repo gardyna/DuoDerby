@@ -1227,6 +1227,7 @@ MonoBehaviour:
   startButton: {fileID: 1853589386}
   settingsButton: {fileID: 805902862}
   dialog: {fileID: 1255905705}
+  mainLevel: DagurTestScene
 --- !u!4 &1258913131
 Transform:
   m_ObjectHideFlags: 0

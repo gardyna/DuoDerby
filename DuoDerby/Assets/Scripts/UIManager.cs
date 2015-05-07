@@ -5,9 +5,10 @@ public class UIManager : MonoBehaviour {
 	public Animator startButton;
 	public Animator settingsButton;
 	public Animator dialog;
+	public string mainLevel;
 
 	public void StartGame() {
-		Application.LoadLevel("WiderRoad");
+		Application.LoadLevel(mainLevel);
 	}
 
 	public void OpenSettings() {
