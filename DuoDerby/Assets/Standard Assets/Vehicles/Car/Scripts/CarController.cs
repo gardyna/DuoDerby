@@ -51,7 +51,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float BrakeInput { get; private set; }
         public float CurrentSteerAngle{ get { return m_SteerAngle; }}
         public float CurrentSpeed{ get { return m_Rigidbody.velocity.magnitude*2.23693629f; }}
-        public float MaxSpeed{get { return m_Topspeed; }}
+        public float MaxSpeed{get { return m_Topspeed; } set{ m_Topspeed = value; }}
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
 
@@ -138,10 +138,10 @@ namespace UnityStandardAssets.Vehicles.Car
             }
 
             //clamp input values
-            steering = Mathf.Clamp(steering, -1, 1);
-            AccelInput = accel = Mathf.Clamp(accel, 0, 1);
-            BrakeInput = footbrake = -1*Mathf.Clamp(footbrake, -1, 0);
-            handbrake = Mathf.Clamp(handbrake, 0, 1);
+			steering = Mathf.Clamp(steering, -1, 1);
+			AccelInput = accel = Mathf.Clamp(accel, 0, 1);
+			BrakeInput = footbrake = -1 * Mathf.Clamp(footbrake, -1, 0);
+			handbrake = Mathf.Clamp(handbrake, 0, 1);
 
             //Set the steer on the front wheels.
             //Assuming that wheels 0 and 1 are the front wheels.
