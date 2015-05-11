@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
 	public Animator dialog;
 	public string mainLevel;
 	public string howToPage;
+	public string creditsPage;
 
 	public void StartGame() {
 		Application.LoadLevel(mainLevel);
@@ -14,6 +15,10 @@ public class UIManager : MonoBehaviour {
 
 	public void HowTo() {
 		Application.LoadLevel (howToPage);
+	}
+
+	public void Credits() {
+		Application.LoadLevel (creditsPage);
 	}
 
 	public void OpenSettings() {
