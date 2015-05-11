@@ -10,13 +10,13 @@ public class SwitchPickup : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			if (working) {
 				working = false;
-				Renderer rend = GetComponent<Renderer>();
-				rend.enabled = false;
+				//Renderer rend = GetComponent<Renderer>();
+				//rend.enabled = false;
 				anim.SetBool("Play", true);
 				other.gameObject.GetComponentInParent<CarUserControl>().Switch();
 				yield return new WaitForSeconds(2);
 				anim.SetBool("Play", false);
-				rend.enabled = true;
+				//rend.enabled = true;
 				working = true;
 			}
 			

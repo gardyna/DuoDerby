@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		public int driver;
 		public int engine;
 		private Launcher m_launch;
+		public float offRoad;
 		
 		
 		private void Awake()
@@ -18,6 +19,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			// get the car controller
 			m_Car = GetComponent<CarController>();
 			m_launch = GetComponentInChildren<Launcher>();
+			offRoad = 1.0f;
 		}
 		
 		
@@ -28,7 +30,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			float v = CrossPlatformInputManager.GetAxis("Vertical_p" + engine.ToString());
 			#if !MOBILE_INPUT
 			//float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-			m_Car.Move(h, v, v, 0f);
+			m_Car.Move(h, v * offRoad, v, 0f);
 			m_launch.rotate(CrossPlatformInputManager.GetAxis("Horizontal_p" + engine.ToString()));
 			if (Input.GetAxis("Fire1") != 0) {
 				StartCoroutine(m_launch.Fire());
