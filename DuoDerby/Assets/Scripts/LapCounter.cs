@@ -45,6 +45,7 @@ public class LapCounter : MonoBehaviour {
 			nextPoint = pointList[0];
 		}
 		if (numlaps == 0) {
+			UItext.text = "Lap: " + totalLaps.ToString() + "/" + totalLaps.ToString();
 			StartCoroutine(endRace());
 			endRace();
 

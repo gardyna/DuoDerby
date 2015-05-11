@@ -30,7 +30,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			//float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 			m_Car.Move(h, v, v, 0f);
 			if (Input.GetAxis("Fire1") != 0) {
-				m_launch.Fire();
+				StartCoroutine(m_launch.Fire());
 			}
 			#else
 			m_Car.Move(h, v, v, 0f);
@@ -38,7 +38,6 @@ namespace UnityStandardAssets.Vehicles.Car
 		}
 		
 		public void Switch() {
-			Debug.Log("Switching");
 			if (driver == 1) {
 				driver = 2;
 				engine = 1;
