@@ -20,7 +20,9 @@ namespace UnityStandardAssets.Vehicles.Car {
 
 		// Update is called once per frame
 		public void rotate(float v) {
-			transform.rotation = Quaternion.Euler(new Vector3(0, v * maxAngle, 0));
+			Vector3 x = transform.parent.localEulerAngles;
+			transform.rotation = Quaternion.Euler(new Vector3(x.x, x.y + (v * maxAngle), x.z));
+			//transform.RotateAround(transform.parent.position, new Vector3(0, 1 ,0), (v * maxAngle));
 		}
 	}
 }

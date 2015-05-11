@@ -3,7 +3,7 @@ using System.Collections;
 using UnityStandardAssets.Vehicles.Car;
 
 public class SwitchPickup : MonoBehaviour {
-	public Animator anim;
+	//public Animator anim;
 	private bool working = true;
 
 	IEnumerator OnTriggerEnter(Collider other) {
@@ -12,10 +12,10 @@ public class SwitchPickup : MonoBehaviour {
 				working = false;
 				//Renderer rend = GetComponent<Renderer>();
 				//rend.enabled = false;
-				anim.SetBool("Play", true);
+				//anim.SetBool("Play", true);
 				other.gameObject.GetComponentInParent<CarUserControl>().Switch();
 				yield return new WaitForSeconds(2);
-				anim.SetBool("Play", false);
+				//anim.SetBool("Play", false);
 				//rend.enabled = true;
 				working = true;
 			}
