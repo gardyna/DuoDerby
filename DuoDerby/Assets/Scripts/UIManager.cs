@@ -6,9 +6,14 @@ public class UIManager : MonoBehaviour {
 	public Animator settingsButton;
 	public Animator dialog;
 	public string mainLevel;
+	public string howToPage;
 
 	public void StartGame() {
 		Application.LoadLevel(mainLevel);
+	}
+
+	public void HowTo() {
+		Application.LoadLevel (howToPage);
 	}
 
 	public void OpenSettings() {
