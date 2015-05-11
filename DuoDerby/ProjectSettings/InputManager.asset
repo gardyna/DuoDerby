@@ -73,7 +73,7 @@ InputManager:
     m_Name: Fire1
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: joystick 1 button 5
     positiveButton: left ctrl
     altNegativeButton: 
     altPositiveButton: mouse 0

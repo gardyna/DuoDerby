@@ -10,12 +10,14 @@ namespace UnityStandardAssets.Vehicles.Car
 		private CarController m_Car; // the car controller we want to use
 		public int driver;
 		public int engine;
+		private Launcher m_launch;
 		
 		
 		private void Awake()
 		{
 			// get the car controller
 			m_Car = GetComponent<CarController>();
+			m_launch = GetComponentInChildren<Launcher>();
 		}
 		
 		
@@ -24,21 +26,12 @@ namespace UnityStandardAssets.Vehicles.Car
 			// pass the input to the car!
 			float h = CrossPlatformInputManager.GetAxis("Horizontal_p" + driver.ToString());
 			float v = CrossPlatformInputManager.GetAxis("Vertical_p" + engine.ToString());
-			if(Input.GetKeyDown(KeyCode.W))
-			{
-				h = CrossPlatformInputManager.GetAxis("Horizontal_p" + driver.ToString());
-			}
-			if(Input.GetKeyDown(KeyCode.A))
-			{
-				v = CrossPlatformInputManager.GetAxis("Vertical" + driver.ToString());
-			}
-			if(Input.GetKeyDown(KeyCode.D))
-			{
-				v = CrossPlatformInputManager.GetAxis("Vertical" + driver.ToString());
-			}
 			#if !MOBILE_INPUT
 			//float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 			m_Car.Move(h, v, v, 0f);
+			if (Input.GetAxis("Fire1") != 0) {
+				m_launch.Fire();
+			}
 			#else
 			m_Car.Move(h, v, v, 0f);
 			#endif
