@@ -19,8 +19,8 @@ namespace UnityStandardAssets.Vehicles.Car {
 		}
 
 		// Update is called once per frame
-		void Update() {
-			transform.rotation = Quaternion.Euler(new Vector3(0, Input.GetAxis("Horizontal_p1") * maxAngle, 0));
+		public void rotate(float v) {
+			transform.rotation = Quaternion.Euler(new Vector3(0, v * maxAngle, 0));
 		}
 	}
 }

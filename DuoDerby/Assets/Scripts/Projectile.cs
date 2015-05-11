@@ -9,7 +9,6 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		GetComponent<Rigidbody>().AddForce(transform.forward * force);
-		WaitAndDestroy();
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -17,11 +16,16 @@ public class Projectile : MonoBehaviour {
 		if (other.tag == "Enemy") {
 			Debug.Log("HIT!!");
 			other.GetComponentInParent<Rigidbody>().AddForce(new Vector3(0, uppForce, 0));
+		} if (other.tag != "Player") {
+			GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+			GetComponent<ParticleSystem>().Play();
+			GetComponent<Renderer>().enabled = false;
+			StartCoroutine(WaitAndDestroy());
 		}
 	}
 
 	IEnumerator WaitAndDestroy() {
-		yield return new WaitForSeconds(3);
-		Destroy(this);
+		yield return new WaitForSeconds(1);
+		Destroy(this.gameObject);
 	}
 }
