@@ -1628,6 +1628,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 1853589386}
   settingsButton: {fileID: 805902862}
+  howtoButton: {fileID: 1199762511}
+  creditsButton: {fileID: 651399559}
   dialog: {fileID: 1255905705}
   mainLevel: DagurTestScene
   howToPage: HowTo
