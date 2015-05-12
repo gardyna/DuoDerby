@@ -23,7 +23,7 @@ namespace UnityStandardAssets.Vehicles.Car {
 		public void rotate(float v) {
 			Vector3 x = transform.parent.localEulerAngles;
 			transform.rotation = Quaternion.Euler(new Vector3(x.x, x.y + (v * maxAngle), x.z));
-			crosshair.transform.position = new Vector3(((gameCanvas.rect.width/2)*v)+(gameCanvas.rect.width/2)+40, crosshair.transform.position.y, crosshair.transform.position.z);
+			crosshair.transform.position = new Vector3(((gameCanvas.rect.width/2)*v)+(gameCanvas.rect.width/2)+90, crosshair.transform.position.y, crosshair.transform.position.z);
 			//crosshair.rect.x = (gameUI.rect.width / 2) * v;
 		}
 	}

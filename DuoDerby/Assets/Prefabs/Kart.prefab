@@ -327,7 +327,7 @@ GameObject:
   - 114: {fileID: 11450452}
   m_Layer: 0
   m_Name: WheelHubFrontRight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,7 +441,7 @@ GameObject:
   - 33: {fileID: 3375162}
   - 65: {fileID: 6599192}
   - 23: {fileID: 2381020}
-  - 114: {fileID: 11445322}
+  - 114: {fileID: 11413672}
   m_Layer: 0
   m_Name: LauncherCube
   m_TagString: Player
@@ -596,7 +596,7 @@ GameObject:
   - 114: {fileID: 11498980}
   m_Layer: 0
   m_Name: WheelHubFrontLeft
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - 114: {fileID: 11402576}
   m_Layer: 0
   m_Name: WheelHubRearLeft
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,6 +1103,21 @@ GameObject:
   - 23: {fileID: 2397362}
   m_Layer: 0
   m_Name: polySurface13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &179242
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 457918}
+  m_Layer: 0
+  m_Name: Launcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,7 +1241,7 @@ GameObject:
   - 114: {fileID: 11474012}
   m_Layer: 0
   m_Name: WheelHubRearRight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1451,6 +1466,7 @@ Transform:
   m_LocalPosition: {x: -.0489999987, y: 1.78600001, z: 1.92799997}
   m_LocalScale: {x: .314449489, y: .307126999, z: 1.00000048}
   m_Children:
+  - {fileID: 457918}
   - {fileID: 468516}
   m_Father: {fileID: 431808}
   m_RootOrder: 9
@@ -1590,7 +1606,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.2000008, y: 0, z: 256.299988}
+  m_LocalPosition: {x: 47.2000008, y: 2.66000009, z: 256.299988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 497136}
@@ -1851,6 +1867,18 @@ Transform:
   - {fileID: 424656}
   m_Father: {fileID: 401266}
   m_RootOrder: 1
+--- !u!4 &457918
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .318448633, y: -14.7515888, z: 7.33380699}
+  m_LocalScale: {x: 3.180161, y: 3.25598216, z: 1}
+  m_Children: []
+  m_Father: {fileID: 412384}
+  m_RootOrder: 0
 --- !u!4 &460860
 Transform:
   m_ObjectHideFlags: 1
@@ -1949,7 +1977,7 @@ Transform:
   m_LocalScale: {x: 1.10098779, y: -1.13589478, z: .200784549}
   m_Children: []
   m_Father: {fileID: 412384}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &469306
 Transform:
   m_ObjectHideFlags: 1
@@ -2145,11 +2173,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .442539036, z: -.156578064}
+  m_LocalPosition: {x: 0, y: .44253999, z: -.156580001}
   m_LocalScale: {x: 2.43000007, y: .409999996, z: 4.46999979}
   m_Children: []
   m_Father: {fileID: 497136}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &489334
 Transform:
   m_ObjectHideFlags: 1
@@ -2264,7 +2292,7 @@ Transform:
   m_LocalScale: {x: 1, y: .469999969, z: 1.91999984}
   m_Children: []
   m_Father: {fileID: 497136}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &494238
 Transform:
   m_ObjectHideFlags: 1
@@ -2336,8 +2364,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 496532}
-  - {fileID: 484278}
   - {fileID: 493432}
+  - {fileID: 484278}
   m_Father: {fileID: 431808}
   m_RootOrder: 0
 --- !u!4 &497800
@@ -3888,7 +3916,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197920}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 2000
   m_Drag: .100000001
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -4409,6 +4437,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carController: {fileID: 11451390}
+--- !u!114 &11413672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576d30cdd0b39534a91f7681581c5bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 182000, guid: 095b2fe1d43bf4d4ca3ae851d8d2da62, type: 2}
+  maxAngle: 45
+  gameCanvas: {fileID: 0}
+  crosshair: {fileID: 0}
 --- !u!114 &11425054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4422,6 +4465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   driver: 1
   engine: 2
+  offRoad: 0
 --- !u!114 &11426228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4531,19 +4575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheel: {fileID: 115156}
---- !u!114 &11445322
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576d30cdd0b39534a91f7681581c5bca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 182000, guid: 095b2fe1d43bf4d4ca3ae851d8d2da62, type: 2}
-  maxAngle: 45
 --- !u!114 &11450452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4585,13 +4616,13 @@ MonoBehaviour:
   - {fileID: 11474012}
   - {fileID: 11402576}
   m_CentreOfMassOffset: {x: 0, y: 0, z: 0}
-  m_MaximumSteerAngle: 15
-  m_SteerHelper: .754999995
+  m_MaximumSteerAngle: 10
+  m_SteerHelper: 1
   m_TractionControl: .100000001
-  m_FullTorqueOverAllWheels: 4000
-  m_ReverseTorque: 150
+  m_FullTorqueOverAllWheels: 8000
+  m_ReverseTorque: 2000
   m_MaxHandbrakeTorque: 1e+08
-  m_Downforce: 100
+  m_Downforce: 200
   m_SpeedType: 0
   m_Topspeed: 150
   m_RevRangeBoundary: 1
