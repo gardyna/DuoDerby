@@ -12,6 +12,7 @@ public class Countdown : MonoBehaviour {
 	public Animator anim;
 	public AudioClip startSound;
 	public GameObject mainCamera;
+	public Image crosshair;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class Countdown : MonoBehaviour {
 	
     IEnumerator StartRace()
     {
+		crosshair.enabled = false;
         Text text = GUIText.GetComponent<Text>();
         CarUserControl drivingScript = PlayerCar.GetComponent<CarUserControl>();
         drivingScript.enabled = false;
@@ -39,6 +41,7 @@ public class Countdown : MonoBehaviour {
             {
                 text.text = "GO!";
                 drivingScript.enabled = true;
+				crosshair.enabled = true;
 				for (int j = 0; j < karts.Count; j++) {
 					karts[j].GetComponent<CarAIControl>().enabled = true;
 				}
