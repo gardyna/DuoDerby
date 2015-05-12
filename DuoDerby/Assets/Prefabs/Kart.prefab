@@ -1108,21 +1108,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &179242
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 457918}
-  m_Layer: 0
-  m_Name: Launcher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &179850
 GameObject:
   m_ObjectHideFlags: 1
@@ -1466,7 +1451,6 @@ Transform:
   m_LocalPosition: {x: -.0489999987, y: 1.78600001, z: 1.92799997}
   m_LocalScale: {x: .314449489, y: .307126999, z: 1.00000048}
   m_Children:
-  - {fileID: 457918}
   - {fileID: 468516}
   m_Father: {fileID: 431808}
   m_RootOrder: 9
@@ -1867,18 +1851,6 @@ Transform:
   - {fileID: 424656}
   m_Father: {fileID: 401266}
   m_RootOrder: 1
---- !u!4 &457918
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179242}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .318448633, y: -14.7515888, z: 7.33380699}
-  m_LocalScale: {x: 3.180161, y: 3.25598216, z: 1}
-  m_Children: []
-  m_Father: {fileID: 412384}
-  m_RootOrder: 0
 --- !u!4 &460860
 Transform:
   m_ObjectHideFlags: 1
@@ -1977,7 +1949,7 @@ Transform:
   m_LocalScale: {x: 1.10098779, y: -1.13589478, z: .200784549}
   m_Children: []
   m_Father: {fileID: 412384}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &469306
 Transform:
   m_ObjectHideFlags: 1
@@ -4448,7 +4420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576d30cdd0b39534a91f7681581c5bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 182000, guid: 095b2fe1d43bf4d4ca3ae851d8d2da62, type: 2}
+  projectile: {fileID: 170712, guid: a4b5f19a5591cd04bb35820b68fd19ad, type: 2}
   maxAngle: 45
   gameCanvas: {fileID: 0}
   crosshair: {fileID: 0}
@@ -4464,7 +4436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driver: 1
-  engine: 2
+  engine: 1
   offRoad: 0
 --- !u!114 &11426228
 MonoBehaviour:
