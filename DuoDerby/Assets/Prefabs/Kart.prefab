@@ -751,6 +751,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &145746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 477642}
+  - 33: {fileID: 3315040}
+  - 64: {fileID: 6463880}
+  - 23: {fileID: 2348096}
+  m_Layer: 0
+  m_Name: hope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &145764
 GameObject:
   m_ObjectHideFlags: 1
@@ -1121,6 +1139,7 @@ GameObject:
   - 124: {fileID: 12417170}
   - 81: {fileID: 8177678}
   - 82: {fileID: 8264654}
+  - 114: {fileID: 11433816}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1590,7 +1609,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.2000008, y: 2.66000009, z: 256.299988}
+  m_LocalPosition: {x: 47.2000008, y: 0, z: 256.299988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 497136}
@@ -1604,6 +1623,7 @@ Transform:
   - {fileID: 482866}
   - {fileID: 412384}
   - {fileID: 452248}
+  - {fileID: 477642}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &432632
@@ -2058,6 +2078,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 422462}
   m_RootOrder: 1
+--- !u!4 &477642
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145746}
+  m_LocalRotation: {x: -1.15202326e-07, y: .707106709, z: -.707106829, w: -1.15202312e-07}
+  m_LocalPosition: {x: 7, y: 23.7000008, z: 198.5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 431808}
+  m_RootOrder: 11
 --- !u!4 &477992
 Transform:
   m_ObjectHideFlags: 1
@@ -2936,6 +2968,30 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &2348096
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145746}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b655b2f6234bfc643b9748f07b817f8c, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2350432
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -3579,6 +3635,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142010}
   m_Mesh: {fileID: 4300008, guid: 8f67eef0ab1c280449ce3efce98c7eb7, type: 3}
+--- !u!33 &3315040
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145746}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3315390
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -3896,6 +3959,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &6463880
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145746}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &6501076
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4501,6 +4576,22 @@ MonoBehaviour:
   m_Target: {fileID: 422234}
   m_StopWhenTargetReached: 0
   m_ReachTargetThreshold: 2
+--- !u!114 &11433816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e302878b4304099b4855cfc5e01fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHeight: 30
+  buttonSpace: 10
+  menuWidth: 150
+  menuHeight: 150
+  MyFont: {fileID: 0}
 --- !u!114 &11435304
 MonoBehaviour:
   m_ObjectHideFlags: 1
