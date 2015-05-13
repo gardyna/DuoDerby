@@ -46,6 +46,8 @@ namespace UnityStandardAssets.Vehicles.Car
         private float m_CurrentTorque;
         private Rigidbody m_Rigidbody;
         private const float k_ReversingThreshold = 0.01f;
+		private float m_Velocity = 0.0f;
+		private Animator animator;
 
         public bool Skidding { get; private set; }
         public float BrakeInput { get; private set; }
@@ -54,6 +56,8 @@ namespace UnityStandardAssets.Vehicles.Car
         public float MaxSpeed{get { return m_Topspeed; } set{ m_Topspeed = value; }}
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
+		//public float Velocity { get; private set; }
+
 
         // Use this for initialization
         private void Start()
@@ -69,6 +73,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
+			m_Velocity = 0.0f;
         }
 
 
@@ -169,6 +174,7 @@ namespace UnityStandardAssets.Vehicles.Car
             AddDownForce();
             CheckForWheelSpin();
             TractionControl();
+
         }
 
 
