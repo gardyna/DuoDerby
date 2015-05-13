@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -44,6 +45,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private float m_AvoidOtherCarSlowdown;    // how much to slow down due to colliding with another car, whilst avoiding
         private float m_AvoidPathOffset;          // direction (-1 or 1) in which to offset path to avoid other car, whilst avoiding
         private Rigidbody m_Rigidbody;
+		private int m_time;
 
 
         private void Awake()
@@ -60,6 +62,14 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void FixedUpdate()
         {
+			if (m_Rigidbody.velocity.magnitude <= 0.1 ) {
+				m_time++;
+			} else {
+				m_time = 0;
+			}
+			if (m_time == 100) {
+				gameObject.transform.position = m_Target.transform.position;
+			}
             if (m_Target == null || !m_Driving)
             {
                 // Car should not be moving,
