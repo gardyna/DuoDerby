@@ -8,7 +8,7 @@ public class SwitchPickup : MonoBehaviour {
 	public float high;
 	public float low;
 
-	IEnumerator OnTriggerEnter(Collider other) {
+	IEnumerator OnTriggerStay(Collider other) {
 		if (other.gameObject.tag == "Player") {
 			if (working) {
 				working = false;
