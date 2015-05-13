@@ -6953,6 +6953,10 @@ Prefab:
       propertyPath: low
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 143328, guid: 7c1d9183eb280d943a4a322941e3516f, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c1d9183eb280d943a4a322941e3516f, type: 2}
   m_IsPrefabParent: 0
@@ -14384,7 +14388,8 @@ Prefab:
       propertyPath: driver
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6599192, guid: 3a60f768338d9694b835dab9ba34cb08, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3a60f768338d9694b835dab9ba34cb08, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1830386908

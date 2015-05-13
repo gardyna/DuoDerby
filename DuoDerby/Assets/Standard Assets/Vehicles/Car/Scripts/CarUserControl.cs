@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			//float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 			m_Car.Move(h, v * offRoad, v, 0f);
 			m_launch.rotate(CrossPlatformInputManager.GetAxis("Horizontal_p" + engine.ToString()));
-			if (Input.GetAxis("Fire1") != 0) {
+			if (Input.GetAxis("Fire" + engine.ToString()) != 0) {
 				StartCoroutine(m_launch.Fire());
 			}
 			#else
