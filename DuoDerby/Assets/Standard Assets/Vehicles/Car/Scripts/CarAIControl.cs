@@ -67,7 +67,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			} else {
 				m_time = 0;
 			}
-			if (m_time == 100) {
+			if (m_time == 300) {
 				gameObject.transform.position = m_Target.transform.position;
 			}
             if (m_Target == null || !m_Driving)
