@@ -46,8 +46,10 @@ namespace UnityStandardAssets.Vehicles.Car
         private float m_CurrentTorque;
         private Rigidbody m_Rigidbody;
         private const float k_ReversingThreshold = 0.01f;
-		private float m_Velocity = 0.0f;
-		private Animator animator;
+
+		// Animation Script 
+
+
 
         public bool Skidding { get; private set; }
         public float BrakeInput { get; private set; }
@@ -56,7 +58,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float MaxSpeed{get { return m_Topspeed; } set{ m_Topspeed = value; }}
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
-		//public float Velocity { get; private set; }
+	
 
 
         // Use this for initialization
@@ -73,7 +75,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
-			m_Velocity = 0.0f;
+
         }
 
 
@@ -82,7 +84,6 @@ namespace UnityStandardAssets.Vehicles.Car
             float f = Mathf.Abs(CurrentSpeed/MaxSpeed);
             float upgearlimit = (1/(float) NoOfGears)*(m_GearNum + 1);
             float downgearlimit = (1/(float) NoOfGears)*m_GearNum;
-
             if (m_GearNum > 0 && f < downgearlimit)
             {
                 m_GearNum--;
