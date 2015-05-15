@@ -14,8 +14,14 @@ public class PauseGame : MonoBehaviour {
 	private int wonders;
 	private GameObject god;	//God is watching//
 
+	public GameObject[] roads;
+	public	Texture2D cage;
+
+	private Renderer r;
+
 	void Start (){
 		wonders = 0;
+		roads = GameObject.FindGameObjectsWithTag("Road");
 		god = GameObject.Find ("hope");
 		god.SetActive (false);
 	}
@@ -27,8 +33,13 @@ public class PauseGame : MonoBehaviour {
 				Time.timeScale =0;
 				this.GetComponent<AudioListener>().enabled = false;
 				wonders++;
-				if (wonders >= 10)
+				if (wonders >= 10){
 					god.SetActive(true);
+					foreach (GameObject road in roads) {
+						road.GetComponent<Renderer>().material.mainTexture = cage;
+						//r.material.SetTexture(road.name, cage);
+					}
+				}
 			}
 			else{
 				Time.timeScale =1;
