@@ -42,6 +42,7 @@ ModelImporter:
     4300008: m_L_trans
     4300010: m_L_eye
     4300012: m_L_gland
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -51,7 +52,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -79,10 +80,10 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     human: []
     skeleton: []
@@ -93,9 +94,10 @@ ModelImporter:
     armStretch: .0500000007
     legStretch: .0500000007
     feetSpacing: 0
-    rootMotionBoneName: 
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+    rootMotionBoneName: H_DDS_MidRes
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 8f67eef0ab1c280449ce3efce98c7eb7,
+    type: 3}
+  animationType: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

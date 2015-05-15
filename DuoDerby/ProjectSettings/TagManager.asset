@@ -8,6 +8,8 @@ TagManager:
   - Pickup
   - Boost
   - Enemy
+  - Player
+  - TargetAI
   layers:
   - Default
   - TransparentFX
