@@ -10,7 +10,7 @@ the game is built using the unity engine</br>
 the current build setting should alredy be aplicable
 
 ## attributions
-we did take a few assets from other people
+we did take a few assets from other people. All imported assets were released under a GPL or Creative commons licence
 
 roads made using:
 * EasyRoads3D Free by AndaSoft (https://www.assetstore.unity3d.com/en/#!/content/987)
@@ -27,3 +27,6 @@ imported scripts:
 				1. CarUserControl.cs
 				2. CarAIControl.cs
 				3. CarControler.cs
+
+Explosions made using:
+* Detonator Explosion Framework made by Ben Throop (https://www.assetstore.unity3d.com/en/#!/content/1)
