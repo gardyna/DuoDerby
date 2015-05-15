@@ -122,9 +122,10 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void CalculateRevs()
         {
+			//Animator.CalculateGearFactor();
             // calculate engine revs (for display / sound)
             // (this is done in retrospect - revs are not used in force/power calculations)
-            CalculateGearFactor();
+            
             var gearNumFactor = m_GearNum/(float) NoOfGears;
             var revsRangeMin = ULerp(0f, m_RevRangeBoundary, CurveFactor(gearNumFactor));
             var revsRangeMax = ULerp(m_RevRangeBoundary, 1f, gearNumFactor);

@@ -14,11 +14,14 @@ namespace UnityStandardAssets.Vehicles.Car
 		public int engine;
 		private Launcher m_launch;
 		public float offRoad;
-		
-		
+		private Animator m_Anim;
+
+
+
 		private void Awake()
 		{
 			// get the car controller
+			m_Anim = GetComponent<Animator>();
 			m_Car = GetComponent<CarController>();
 			m_launch = GetComponentInChildren<Launcher>();
 			offRoad = 1.0f;
@@ -37,6 +40,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			if (Input.GetAxis("Fire" + engine.ToString()) != 0) {
 				StartCoroutine(m_launch.Fire());
 			}
+
 
 			#else
 			m_Car.Move(h, v, v, 0f);

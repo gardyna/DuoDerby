@@ -9,6 +9,7 @@ TagManager:
   - Boost
   - Enemy
   - Player
+  - TargetAI
   layers:
   - Default
   - TransparentFX

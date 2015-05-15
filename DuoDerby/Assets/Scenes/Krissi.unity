@@ -6145,8 +6145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa97484cbcbab84c9979afa118ed50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerAnimationNode: {fileID: 100002, guid: bc14bc0aa3a05c44fbfabf8007dc5720,
-    type: 3}
+  m_PlayerAnimationNode: {fileID: 1650049737}
 --- !u!4 &720447332
 Transform:
   m_ObjectHideFlags: 0
@@ -17098,6 +17097,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 720447332}
     m_Modifications:
+    - target: {fileID: 13700000, guid: bc14bc0aa3a05c44fbfabf8007dc5720, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bc14bc0aa3a05c44fbfabf8007dc5720, type: 3}
       propertyPath: m_LocalPosition.x
       value: -.0200004578
@@ -17206,9 +17209,17 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 75eeccd16c9b63a4f8b8bc9d8e833d21, type: 2}
+    - target: {fileID: 13700000, guid: bc14bc0aa3a05c44fbfabf8007dc5720, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc14bc0aa3a05c44fbfabf8007dc5720, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1650049737
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: bc14bc0aa3a05c44fbfabf8007dc5720, type: 3}
+  m_PrefabInternal: {fileID: 1650049736}
 --- !u!1 &1654646604
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Vehicles.Car;
-using System.Linq;
+
 public class AnimatonController : MonoBehaviour
 {
 	private Animator m_Animator;
@@ -16,7 +16,7 @@ public class AnimatonController : MonoBehaviour
 	public void Start()
 	{	 
 		m_Animator = GetComponent<Animator>();
-		//m_Rigitbody = GetComponent<Rigidbody> ();
+		m_Rigitbody = GetComponent<Rigidbody> ();
 		m_CarControl = GetComponent<CarController>();
 		m_Move = 0.0f;
 	}
@@ -28,7 +28,7 @@ public class AnimatonController : MonoBehaviour
 		m_Animator.SetFloat ("blendStages", theVariable);	
 		
 		if (m_Move >= 0.00f && m_Move < 145.0f) {
-			m_Animator.SetTrigger (runningHash);
+			//m_Animator.SetInteger (runningHash);
 			Debug.Log ("Triggered");
 		} else if (m_Move > 145.0f) {
 			m_Animator.SetTrigger (standHash);
@@ -37,7 +37,7 @@ public class AnimatonController : MonoBehaviour
 			m_Animator.SetTrigger (stationaryHash);
 			Debug.Log ("Triggered");
 		}
-
+		m_PlayerAnimationNode.SendMessage ("");
 	}
 
 }
