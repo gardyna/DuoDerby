@@ -14,46 +14,27 @@ namespace UnityStandardAssets.Vehicles.Car {
 	}
 
 	public class CarController : MonoBehaviour {
-		[SerializeField]
-		private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
-		[SerializeField]
-		private WheelCollider[] m_WheelColliders = new WheelCollider[4];
-		[SerializeField]
-		private GameObject[] m_WheelMeshes = new GameObject[4];
-		[SerializeField]
-		private WheelEffects[] m_WheelEffects = new WheelEffects[4];
-		[SerializeField]
-		private Vector3 m_CentreOfMassOffset;
-		[SerializeField]
-		private float m_MaximumSteerAngle;
+		[SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
+		[SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
+		[SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
+		[SerializeField] private WheelEffects[] m_WheelEffects = new WheelEffects[4];
+		[SerializeField] private Vector3 m_CentreOfMassOffset;
+		[SerializeField] private float m_MaximumSteerAngle;
 		[Range(0, 1)]
-		[SerializeField]
-		private float m_SteerHelper; // 0 is raw physics , 1 the car will grip in the direction it is facing
+		[SerializeField] private float m_SteerHelper; // 0 is raw physics , 1 the car will grip in the direction it is facing
 		[Range(0, 1)]
-		[SerializeField]
-		private float m_TractionControl; // 0 is no traction control, 1 is full interference
-		[SerializeField]
-		private float m_FullTorqueOverAllWheels;
-		[SerializeField]
-		private float m_ReverseTorque;
-		[SerializeField]
-		private float m_MaxHandbrakeTorque;
-		[SerializeField]
-		private float m_Downforce = 100f;
-		[SerializeField]
-		private SpeedType m_SpeedType;
-		[SerializeField]
-		private float m_Topspeed = 200;
-		[SerializeField]
-		private static int NoOfGears = 5;
-		[SerializeField]
-		private float m_RevRangeBoundary = 1f;
-		[SerializeField]
-		private float m_SlipLimit;
-		[SerializeField]
-		private float m_BrakeTorque;
-		[SerializeField]
-		private Animator anim;
+		[SerializeField] private float m_TractionControl; // 0 is no traction control, 1 is full interference
+		[SerializeField] private float m_FullTorqueOverAllWheels;
+		[SerializeField] private float m_ReverseTorque;
+		[SerializeField] private float m_MaxHandbrakeTorque;
+		[SerializeField] private float m_Downforce = 100f;
+		[SerializeField] private SpeedType m_SpeedType;
+		[SerializeField] private float m_Topspeed = 200;
+		[SerializeField] private static int NoOfGears = 5;
+		[SerializeField] private float m_RevRangeBoundary = 1f;
+		[SerializeField] private float m_SlipLimit;
+		[SerializeField] private float m_BrakeTorque;
+		[SerializeField] private Animator anim;
 
 		private Quaternion[] m_WheelMeshLocalRotations;
 		private Vector3 m_Prevpos, m_Pos;
@@ -64,9 +45,6 @@ namespace UnityStandardAssets.Vehicles.Car {
 		private float m_CurrentTorque;
 		private Rigidbody m_Rigidbody;
 		private const float k_ReversingThreshold = 0.01f;
-
-		// Animation Script 
-
 
 
 		public bool Skidding { get; private set; }
