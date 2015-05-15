@@ -16,7 +16,7 @@ public class AnimatonController : MonoBehaviour
 	public void Start()
 	{	 
 		m_Animator = GetComponent<Animator>();
-		m_Rigitbody = GetComponent<Rigidbody> ();
+		//m_Rigitbody = GetComponent<Rigidbody> ();
 		m_CarControl = GetComponent<CarController>();
 		m_Move = 0.0f;
 	}
