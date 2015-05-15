@@ -19,24 +19,26 @@ using System.Collections.Generic;
 public class AutoTargeting : MonoBehaviour
 {
 	public GameObject m_TargetingObj;
-	public GameObject m_Parent;
+	public GameObject m_ParentObj;
+	public GameObject m_MissileLauncer;
 	
-	public List<GameObject> m_Targets = new List<GameObject>();
-	private GameObject m_TargetAI;
-	private GameObject m_Player;
+	public List<GameObject> m_TargetsAI = new List<GameObject>();
+	public GameObject m_TargetAI;
+	public GameObject m_Player;
 	private float m_shortestDistance;
 	private float m_longestDistance;
 	private float m_distance;
-	public int m_numberOfTargets;
+	private int m_numberOfTargets;
 	private bool targetFound; 
 	private float m_closestTarget;
 	private Vector3 rayVector3;
 	private Vector3 m_Up;
+
 	
 	
 	public void Start()
 	{
-		m_numberOfTargets = m_Targets.Count;
+		m_numberOfTargets = m_TargetsAI.Count;
 		m_shortestDistance = 300.0f;
 		m_longestDistance = 300.0f;
 		targetFound = false;
