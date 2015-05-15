@@ -1631,7 +1631,7 @@ MonoBehaviour:
   howtoButton: {fileID: 1199762511}
   creditsButton: {fileID: 651399559}
   dialog: {fileID: 1255905705}
-  mainLevel: DagurTestScene
+  mainLevel: DagurTestScene2
   howToPage: HowTo
   creditsPage: Credits
 --- !u!4 &1258913131
