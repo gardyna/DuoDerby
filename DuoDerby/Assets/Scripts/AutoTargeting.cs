@@ -21,10 +21,12 @@ public class AutoTargeting : MonoBehaviour
 	public GameObject m_TargetingObj;
 	public GameObject m_ParentObj;
 	public GameObject m_MissileLauncer;
-	
-	public List<GameObject> m_TargetsAI = new List<GameObject>();
-	public GameObject m_TargetAI;
+	public GameObject[] m_TargetsListAI = {};
+	public GameObject m_TargetFound;
 	public GameObject m_Player;
+	public RaycastHit hit;
+	public Ray autoAim;
+
 	private float m_shortestDistance;
 	private float m_longestDistance;
 	private float m_distance;
@@ -34,11 +36,9 @@ public class AutoTargeting : MonoBehaviour
 	private Vector3 rayVector3;
 	private Vector3 m_Up;
 
-	
-	
 	public void Start()
 	{
-		m_numberOfTargets = m_TargetsAI.Count;
+		m_numberOfTargets = m_TargetsListAI.Length;
 		m_shortestDistance = 300.0f;
 		m_longestDistance = 300.0f;
 		targetFound = false;
@@ -48,27 +48,28 @@ public class AutoTargeting : MonoBehaviour
 	public void Update()
 	{
 		float tempDist;
-		tempDist = Vector3.Distance(m_Player.transform.position, m_TargetAI.transform.position);
-		
-		for(int i = 0; i < m_numberOfTargets; i++)
+		foreach (GameObject AI in m_TargetsListAI) 
 		{
-			if(tempDist < m_longestDistance)
+			tempDist = Vector3.Distance(m_Player.transform.position, AI.transform.position);
+			for(int i = 0; i < m_numberOfTargets; i++)
 			{
-				if(tempDist < m_shortestDistance)
+				if(tempDist < m_longestDistance)
 				{
-					m_shortestDistance = tempDist;
-					targetFound = true;
-					m_distance = m_shortestDistance;
+					if(tempDist < m_shortestDistance)
+					{
+						m_shortestDistance = tempDist;
+						targetFound = true;
+						m_distance = m_shortestDistance;
+					}
 				}
 			}
-		}
-		
-		if(isClosestTarget(m_TargetAI))
-		{
-			//targetAquered(GameObject obj));
-			/*
-			RaycastHit hit;
-			Ray autoAim = new Ray(new Vector3(0,0,0),  rayVector3(0,1,0));
+
+			if(isClosestTarget(m_TargetFound))
+			{
+				targetAquered(m_TargetFound);
+
+
+			autoAim = new Ray(Vector3.forward, Vector3.up);
 			
 			if(Physics.Raycast(autoAim, out hit, m_shortestDistance))
 			{
@@ -77,38 +78,38 @@ public class AutoTargeting : MonoBehaviour
 					parentAim();
 				}
 			}
-			*/
-		}
-		
-		else
-		{
-			targetFound = false;
-		}
+			
+			}
+			
+			else
+			{
+				targetFound = false;
+			}
+		}		
 	}
 
 
 	public void parentAim()
 	{
-		/*
+
 		if (m_TargetingObj != null)
 		{
-			m_TargetingObj = GameObject.FindGameObjectsWithTag("TargetAI");
+			//m_TargetingObj = GameObject.FindGameObjectsWithTag("TargetAI");
 			GameObject tempPlayer;
-			tempPlayer = Instantiate(m_Up, Vector3.zero, Quaternion.identity);
+			//tempPlayer = Instantiate(m_Up, Vector3.zero, Quaternion.identity);
 
-			GameObject tempChild;
-			tempChild.transform.parent = tempPlayer.transform; 
-			tempChild.transform.TransformVector(0f, 0.0f, 0.0f);
+			//GameObject tempChild;
+			//tempChild.transform.parent.transform = tempPlayer.transform; 
+			//tempChild.transform.TransformVector(0f, 0.0f, 0.0f);
 		}
 	}
-	/*
-	public void  targetAquered(GameObject obj))
+
+	public void targetAquered(GameObject obj)
 	{
-		if(targetFound == true && isClosestTarget())
+		if(targetFound == true)
 		{
-			this.m_TargetLocated = shortestDistance;
+			m_TargetFound = obj;
 		}
-		*/
 	}
 
 	public bool isClosestTarget(GameObject obj)

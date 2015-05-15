@@ -36,7 +36,6 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
         [SerializeField] private float m_BrakeTorque;
-		[SerializeField] private Animator anim;
 
         private Quaternion[] m_WheelMeshLocalRotations;
         private Vector3 m_Prevpos, m_Pos;
@@ -49,7 +48,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private const float k_ReversingThreshold = 0.01f;
 
 		// Animation Script 
-
+		//private Animator m_Anim;
 
 
         public bool Skidding { get; private set; }
@@ -76,6 +75,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
+			//m_Anim = GetComponent<Animator>();
 
         }
 
@@ -136,7 +136,6 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void Move(float steering, float accel, float footbrake, float handbrake)
         {
-			anim.SetFloat("Speed", accel);
             for (int i = 0; i < 4; i++)
             {
                 Quaternion quat;
@@ -178,6 +177,7 @@ namespace UnityStandardAssets.Vehicles.Car
             AddDownForce();
             CheckForWheelSpin();
             TractionControl();
+
 
         }
 
